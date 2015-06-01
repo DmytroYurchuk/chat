@@ -1,1 +1,1 @@
-web: python chat.py --port=$PORT --logging=warning
+web: python chat.py --port=$PORT
