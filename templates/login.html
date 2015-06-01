@@ -1,0 +1,19 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+    <title>Login My Chat</title>
+    <link rel="stylesheet" href="{{ static_url("chat.css") }}" type="text/css"/>
+  </head>
+  <body>
+    <b>Enter Your Name</b>
+    <div>	
+	  <form action="/login" method="post" id="loginform">
+	    <input name="name" id="login" style="width:500px"/>
+	    <input type="submit" value="{{ _("Login") }}"/>
+        <input type="hidden" name="next" value="{{ request.path }}"/>
+        {% module xsrf_form_html() %}
+    </form>
+	</div>
+  </body>
+ </html>
